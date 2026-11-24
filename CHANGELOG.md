@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.1 - 2026-11-24
+
+- **Installable from Git**: the compiled `dist/` is now committed, so
+  `opencode plugin add github:CelestialMatrix/opencode-claude#main` loads the
+  plugin without a separate build step.
+- Fork metadata and docs point at the CelestialMatrix repository.
+
 ## 1.7.0 - 2026-10-30
 
 - **Background compaction works with Claude**: with OpenCode's
