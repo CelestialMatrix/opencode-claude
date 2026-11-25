@@ -2415,7 +2415,7 @@ async function main() {
   await stopProxy();
 
   // TypeScript build
-  const build = spawnSync("bun", ["run", "build"], {
+  const build = spawnSync("bun", ["run", "compile"], {
     cwd: new URL("..", import.meta.url).pathname,
     encoding: "utf8",
   });

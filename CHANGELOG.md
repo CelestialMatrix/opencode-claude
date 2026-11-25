@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- **Installable from Git on OpenCode 2.4.1**: the `build` script made npm try
+  to prepare the Git dependency, and OpenCode 2.4.1's bundled npm re-enters
+  the OpenCode CLI instead of npm, so `opencode plugin add
+  github:CelestialMatrix/opencode-claude#main` failed with
+  `git dep preparation failed`. The script is now called `compile`, which npm
+  does not treat as a preparation trigger.
+
 ## 1.7.1 - 2026-11-24
 
 - **Installable from Git**: the compiled `dist/` is now committed, so

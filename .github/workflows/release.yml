@@ -96,7 +96,7 @@ jobs:
         run: bun run test
 
       - name: Build package
-        run: bun run build
+        run: bun run compile
 
       - name: Commit and tag
         env:

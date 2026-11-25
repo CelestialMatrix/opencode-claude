@@ -161,13 +161,15 @@ Most people won't need these. Set them in the environment of the OpenCode server
 
 ```bash
 bun install
-bun run build
+bun run compile
 bun run test
 ```
 
-To try a local build, point `plugins` at the checkout folder: `{ "plugins": ["/path/to/opencode-claude"] }` after running `bun run build`.
+To try a local build, point `plugins` at the checkout folder: `{ "plugins": ["/path/to/opencode-claude"] }` after running `bun run compile`.
 
-Because this fork is installed from Git, the compiled `dist/` is committed. Run `bun run build` and commit the updated `dist/` whenever you change `src/`.
+Because this fork is installed from Git, the compiled `dist/` is committed. Run `bun run compile` and commit the updated `dist/` whenever you change `src/`.
+
+The script is called `compile` and not `build` on purpose: npm treats a Git dependency with a `build` script as needing preparation, and OpenCode 2.4.1's bundled npm cannot spawn itself for that step, so Git installs fail with `git dep preparation failed`. Keep the name `compile`.
 
 Issues and pull requests are welcome at [CelestialMatrix/opencode-claude](https://github.com/CelestialMatrix/opencode-claude). Sibling plugins: [opencode-cursor](https://github.com/openchamber/opencode-cursor) and [opencode-commandcode](https://github.com/openchamber/opencode-commandcode).
 
